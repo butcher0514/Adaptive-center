@@ -1,0 +1,286 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>自适应居中的登录框</title>
+<style type="text/css">
+body, html {
+	margin:0;
+	padding:0;
+	height:100%;
+	
+	
+}
+#box {
+	width:100%;
+	height:100%;
+	background:url(images/sky.jpg) no-repeat 0 0;
+	background-size:100% 100%;
+	/* 开启盒布局 */
+	display:-webkit-box;
+	display:-moz-box;
+	display:box;	
+	/* 水平居中 */
+	-webkit-box-pack:center;
+	-moz-box-pack:center;
+	box-pack:center;
+	/* 垂直居中 */
+	-webkit-box-align:center;
+	-moz-box-align:center;
+	box-align:center;
+}
+#box div {
+	opacity:0.8;
+}
+#box {
+	width:500px;
+	height:200px;
+	border:1px solid #F90;
+	/* 开启盒布局 */
+	display:-webkit-box;
+	display:-moz-box;
+	display:box;	
+
+}
+#box div {
+	padding:5px;
+	border:1px solid #ccc;
+	margin:1px;
+}
+#box div img {
+	width:120px;
+}
+body, html {
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+	font-family:Arial, Helvetica, sans-serif;
+}
+h3 {
+	padding:15px;
+	color:#FFFFFF;
+	margin:0px;
+}
+a {
+	color:#fff;
+}
+body {
+	/* 开启盒布局 */
+	display:-webkit-box;
+	display:-moz-box;
+	display:box;
+	/* 设置盒子内元素水平居中 */
+	-webkit-box-pack:center;
+	-moz-box-pack:center;
+	box-pack:center;
+}
+/* 第一层 */
+#area {
+	height:100%;
+	max-width:950px;            /* 最大宽度  */
+	min-width:600px;            /* 最小宽度  */
+	/* 开启盒布局 */
+	display:-webkit-box;
+	display:-moz-box;
+	display:box;
+	/* 垂直布局，实现竖直方向的三栏布局 */
+	-webkit-box-orient:vertical;
+	-moz-box-orient:vertical;
+	box-orient:vertical;
+	/* 定义空间弹性，使其充满页面空间，但宽度受max-width限制 */
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	box-flex:1;
+}
+/* 第二层 */
+#area header {
+	background-color:#ff6600;
+	text-align:center;
+	line-height:35px;
+	color:#FFFFFF;
+	font-size:24px;
+	font-weight:bold;
+}
+#area #header {
+	padding:15px;
+}
+#area #container {
+	/* 定义空间弹，使其随空间伸缩尺寸 */
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	box-flex:1;
+	/* 开启盒布局 */
+	display:-webkit-box;
+	display:-moz-box;
+	display:box;
+}
+#area footer {
+	background-color:#f47D31;
+	text-align:center;
+	line-height:20px;
+	color:#FFFFFF;
+}
+#area #footer {
+	padding:10px;
+}
+/* 第三层 */
+#area #container nav {
+	width:170px;
+	background-color:#999;
+}
+#area #container article {
+	padding:10px;
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	box-flex:1;
+	display:-webkit-box;
+	display:-moz-box;
+	display:box;
+	/* 布局方向设置为竖直方向 */
+	-webkit-box-orient:vertical;
+	-moz-box-orient:vertical;
+	box-orient:vertical;
+}
+#area #container aside {
+	width:170px;
+	background-color:#999;
+}
+/* 左侧导航 */
+#area #container nav a:link, #area #container nav a:visited {
+	display:block;
+	border-bottom:3px solid #fff;
+	padding:10px;
+	text-decoration:none;
+	font-weight:bold;
+	margin:5px;
+}
+#area #container nav a:hover {
+	color:#FFFFFF;
+	background-color:#f47D31;
+}
+/* 中间内容 */
+#area #container article p {
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	box-flex:1;
+}
+/* 侧边栏 */
+#area #container aside p {
+	padding:15px;
+	font-weight:bold;
+	font-style:italic;
+	color:#FFF;
+}
+div {
+	margin:20px auto;
+	width:200px;
+	height:100px;
+	background-color:#f90;
+	-webkit-box-shadow:0 0 5px 5px #333;
+	-moz-box-shadow:0 0 5px 5px #333;
+	box-shadow:0 0 5px 5px #333;
+}
+div {
+	width:200px;
+	height:100px;
+	background-color:#f90;
+	-webkit-box-shadow: inset 5px 5px 5px #333;         /* 兼容webkit内核 */
+	-moz-box-shadow: inset 5px 5px 5px #333;           /* 兼容gecko内核 */
+	box-shadow: inset 5px 5px 5px #333;                /* 标准用法 */
+}
+div {
+	margin:5px;
+	width:200px;                 /* 宽度200px */
+	height:80px;                 /* 高度80px */
+	background-color:#fe0;
+	border:10px solid #f90;        /* 边框宽度为10px */
+	padding:10px;                /* 内边距宽度为10px */
+	font-weight:bold;
+	font-size:18px;
+	line-height:40px;
+}
+/* 属性值border-box */
+.s1 {
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+/* 属性值padding-box */
+.s2 {
+	box-sizing:padding-box;
+	-webkit-box-sizing:padding-box;
+	-moz-box-sizing:padding-box;
+}
+/* 属性值content-box */
+.s3 {
+	box-sizing:content-box;
+	-webkit-box-sizing:content-box;
+	-moz-box-sizing:content-box;
+}
+div {
+	margin:10px;
+	width:200px;
+	height:80px;
+	padding:10px;
+	border:1px solid #f90;
+	float:left;
+}
+#box1 {
+	overflow-x:scroll;      /* 水平方向属性值为scroll */
+	overflow-y:scroll;      /* 垂直方向属性值为scroll */
+}
+#box2 {
+	overflow-x:auto;        /* 水平方向属性值为auto */
+	overflow-y:auto;        /* 垂直方向属性值为auto */
+}
+#box3 {
+	overflow-x:hidden;      /* 水平方向属性值为hidden */
+	overflow-y:hidden;      /* 垂直方向属性值为hidden */
+}
+#box4 {
+	overflow-x:visible;     /* 水平方向属性值为visible */
+	overflow-y:visible;     /* 垂直方向属性值为visible */
+}
+
+</style>
+<body>
+<div id="box1">盒模型是网页设计中最基本、最重要的模型。CSS3新增的与盒模型有关的属性如盒子阴影、盒子尺寸和溢出处理等，为前端设计师带来更多的便利及人性化设计。</div>
+<div id="box2">盒模型是网页设计中最基本、最重要的模型。CSS3新增的与盒模型有关的属性如盒子阴影、盒子尺寸和溢出处理等，为前端设计师带来更多的便利及人性化设计。</div>
+<div id="box3">盒模型是网页设计中最基本、最重要的模型。CSS3新增的与盒模型有关的属性如盒子阴影、盒子尺寸和溢出处理等，为前端设计师带来更多的便利及人性化设计。</div>
+<div id="box4">盒模型是网页设计中最基本、最重要的模型。CSS3新增的与盒模型有关的属性如盒子阴影、盒子尺寸和溢出处理等，为前端设计师带来更多的便利及人性化设计。</div>
+<div class="s1">border-box</div>
+<div class="s2">padding-box</div>
+<div class="s3">content-box</div>
+<div></div>
+<div id="area">
+  <header id="header">页头：使用新型盒布局设计网页 </header>
+  <div id="container">
+    <nav>
+      <h3>导航栏</h3>
+      <a href="#">盒布局</a> <a href="#">布局方向</a> <a href="#">布局顺序</a> </nav>
+    <article>
+      <header>标题：开启盒布局 </header>
+      <p>内容：盒布局是CSS3发展的新型布局方式，它比传统的浮动布局方式更加完善、更加灵活，而使用方法却极为简单。
+        开启盒布局后，文档就会按照盒布局默认的方式，来布局子元素。</p>
+      <footer> 日期：2011-10 </footer>
+    </article>
+    <aside>
+      <h3>侧边栏</h3>
+      <p>侧边栏内容</p>
+    </aside>
+  </div>
+  <footer id="footer"> 页脚：2011&copy; </footer>
+</div>
+<div id="box">
+  <div><img src="images/IL1.jpg" /></div>
+  <div><img src="images/IL2.jpg" /></div>
+  <div><img src="images/IL3.jpg" /></div>
+  <div><img src="images/IL4.jpg" /></div>
+</div>
+<div id="box">
+  <div><img src="images/login.png" /></div>
+</div>
+</body>
+</html>
